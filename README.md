@@ -1,17 +1,47 @@
-Ladies and gentlemen,
+# servers-and-security-groups
+infrastructure of an ec2 instane having an iam role connected to it
 
-Today, I am thrilled to introduce you to a project that embodies the essence of innovation and collaboration – our CloudFormation Repository, a dynamic ecosystem of possibilities housed within its diverse branches.
+### Architecture
 
-Within this repository, we've harnessed the power of AWS CloudFormation to orchestrate and automate infrastructure provisioning like never before. What truly sets it apart is its versatility – each branch represents a unique avenue towards deploying various applications, services, and architectures.
+   ![infras](https://user-images.githubusercontent.com/94189602/212038693-4c747010-ae39-4266-9502-e14cbd02766e.PNG)
 
-From the "Starter Templates" branch, catering to those new to CloudFormation, to the "Advanced Deployments" branch for intricate, multi-tiered setups, our repository offers a spectrum of options that suit every level of expertise. We've even ventured into "Serverless Wonders" and "Container Magic," exploring cutting-edge paradigms in the cloud landscape.
+### Usage
+### Make sure you have the following installed:
 
-But this repository isn't just a hub for templates; it's an arena for collaboration. Each branch reflects a collective effort, a synergy of skills and ideas, contributed by experts and enthusiasts alike. 
+* [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-So, I invite you all to explore, experiment, and engage with our CloudFormation Repository's various branches. It's more than just code – it's a dynamic platform where innovation thrives, where the boundaries of what's possible in the cloud are constantly pushed.
+### Set up your AWS credentials:
 
-Thank you for joining us on this exciting journey. Together, let's navigate these diverse branches, unravel new possibilities, and collectively reshape the landscape of cloud infrastructure.
+            aws configure
+      
+### To create the infrastructure, run the following command:
+            
+            # Create the infrastructure
+            # Clone the repo
+            git clone https://github.com/mustafaDevop/CloudFormation-Projects
 
-Welcome to our CloudFormation Repository – where every branch leads to a new dimension of cloud deployment.
+            # Change directory
+            cd CloudFormation-Projects
 
-Thank you.
+            # Make the script executable
+            sudo chmod +x create-servers.sh
+
+            # Run the script, replace {stack-name} with your own stack name
+            ./create-servers.sh {stack-name}
+
+
+### To update the infrastructure, run the following command:
+            
+            # Make the script executable
+            sudo chmod +x update-servers.sh
+
+            # Run the script, replace {stack-name} with your own stack name
+            ./update.sh {stack-name}
+  
+### To delete the infrastructure, run the following command:
+                  
+                  # Make the script executable
+                  sudo chmod +x delete-servers.sh
+
+                  # Run the script, replace {stack-name} with your own stack name
+                  ./delete.sh {stack-name}
