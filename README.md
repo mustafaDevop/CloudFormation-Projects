@@ -20,10 +20,10 @@ a cloud formation script that has an auto scaling group and connected to a datab
             
             # Create the infrastructure
             # Clone the repo
-            git clone https://github.com/mustafaDevop/storage-and-database
+            git clone https://github.com/mustafaDevop/CloudFormation-Projects
 
             # Change directory
-            cd high-availability-web
+            cd CloudFormation-Projects
 
             # Make the script executable
             sudo chmod +x create-servers.sh
