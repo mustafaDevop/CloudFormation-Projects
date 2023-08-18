@@ -1,17 +1,64 @@
-Ladies and gentlemen,
+# Project Title - Deploy a high-availability web app using CloudFormation
 
-Today, I am thrilled to introduce you to a project that embodies the essence of innovation and collaboration – our CloudFormation Repository, a dynamic ecosystem of possibilities housed within its diverse branches.
+This folder provides the starter code for the "ND9991 - C2- Infrastructure as Code - Deploy a high-availability web app using CloudFormation" project. This folder contains the following files:
 
-Within this repository, we've harnessed the power of AWS CloudFormation to orchestrate and automate infrastructure provisioning like never before. What truly sets it apart is its versatility – each branch represents a unique avenue towards deploying various applications, services, and architectures.
+final-project-starter.yml
+Students have to write the CloudFormation code using this YAML template for building the cloud infrastructure, as required for the project.
 
-From the "Starter Templates" branch, catering to those new to CloudFormation, to the "Advanced Deployments" branch for intricate, multi-tiered setups, our repository offers a spectrum of options that suit every level of expertise. We've even ventured into "Serverless Wonders" and "Container Magic," exploring cutting-edge paradigms in the cloud landscape.
+server-parameters.json
+Students may use a JSON file for increasing the generic nature of the YAML code. For example, the JSON file contains a "ParameterKey" as "EnvironmentName" and "ParameterValue" as "UdacityProject".
 
-But this repository isn't just a hub for templates; it's an arena for collaboration. Each branch reflects a collective effort, a synergy of skills and ideas, contributed by experts and enthusiasts alike. 
+In YAML code, the ${EnvironmentName} would be substituted with UdacityProject accordingly.
 
-So, I invite you all to explore, experiment, and engage with our CloudFormation Repository's various branches. It's more than just code – it's a dynamic platform where innovation thrives, where the boundaries of what's possible in the cloud are constantly pushed.
+### Diagram
+![architecture diagram](https://user-images.githubusercontent.com/94189602/211149271-c8fb7339-57c6-4ad7-8553-32bd80377654.PNG)
 
-Thank you for joining us on this exciting journey. Together, let's navigate these diverse branches, unravel new possibilities, and collectively reshape the landscape of cloud infrastructure.
 
-Welcome to our CloudFormation Repository – where every branch leads to a new dimension of cloud deployment.
+### Usage
+### Make sure you have the following installed:
 
-Thank you.
+* [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+### Set up your AWS credentials:
+
+            aws configure
+      
+### To create the infrastructure, run the following command:
+            
+            # Create the infrastructure
+            # Clone the repo
+            git clone https://github.com/mustafaDevop/CloudFormation-Projects
+
+            # Change directory
+            cd CloudFormation-Projects
+
+            # Make the script executable
+            sudo chmod +x create-servers.sh
+
+            # Run the script, replace {stack-name} with your own stack name
+            ./create-servers.sh {stack-name}
+
+
+### To update the infrastructure, run the following command:
+            
+            # Make the script executable
+            sudo chmod +x update-servers.sh
+
+            # Run the script, replace {stack-name} with your own stack name
+            ./update.sh {stack-name}
+  
+### To delete the infrastructure, run the following command:
+                  
+                  # Make the script executable
+                  sudo chmod +x delete-servers.sh
+
+                  # Run the script, replace {stack-name} with your own stack name
+                  ./delete.sh {stack-name}
+                  
+### Here is the link while it last
+
+            http://udacity-loadbalancer-1215285312.us-west-2.elb.amazonaws.com/
+            
+ ![loadbalancer screenshot](https://user-images.githubusercontent.com/94189602/211167955-8c2fd3a4-7534-450d-acd8-74492883fc32.PNG)
+
+      
